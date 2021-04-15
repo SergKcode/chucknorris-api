@@ -2,6 +2,10 @@ import React from 'react'
 
 export const ApiLoaded = ({loaded}) => {
     console.log(loaded)
+    const handleOnClick = () =>{
+        console.log("a")
+
+    }
 
     
     return (
@@ -9,10 +13,8 @@ export const ApiLoaded = ({loaded}) => {
             {loaded && 
                 <div className= "winner">
                     <h2>show value choosen</h2>
-                    <button>Get more options</button>
+                    <button onClick={handleOnClick}>Get more options</button>
                 </div>
-
-                
             }
             
         </div>
