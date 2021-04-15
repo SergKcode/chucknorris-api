@@ -1,30 +1,40 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 export const ShowMemes = () => {
     let [api, setApi] = useState('')
+    let [apiOne, setApiOne] = useState('')
     let [apiloaded, setApiloaded] = useState(false)
 
-    fetch('https://api.chucknorris.io/jokes/random')
-    .then(response => response.json())
-    .then(data => {
-        setApi(data)
-        setApiloaded(true)
-    }
-    ) 
+    const getDatos=()=>{
+        fetch('https://api.chucknorris.io/jokes/random')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.value)
+            setApi(data.value)
+        fetch('https://api.chucknorris.io/jokes/random')
+        .then(response => response.json())
+        .then(dataOne => {
+            console.log(dataOne.value)
+            setApiOne(dataOne.value)
+            setApiloaded(true)
+        }
+        
+        )
+        
+        })}
 
+
+    useEffect(() => {
+        getDatos()
+            
+
+    }, [])
 
 
     return (
-        <div> 
-     {
-            apiloaded &&
-            <div>
-              {
-                api.map(jokes => <h1>{jokes.data}</h1>
-                )
-              }
-              </div>
-          }
+         
+           <div> 
+          
           </div>
     )
-}
+        }
