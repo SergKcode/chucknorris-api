@@ -29,12 +29,41 @@ export const ShowMemes = () => {
             
 
     }, [])
+    
+    /*let [value, setValue] = useState('')
+    const showMessage = () => {
+        console.log(value);
+      };
+    let [valueOne, setValueOne] = useState('')
+    const showMessageOne = () => {
+        console.log(valueOne);
+      };*/
+
+
+      let [winner, setWinner] = useState(false)
+      
+
+      const handle = () => {
+         setWinner(api)
+      }
+      const handleTwo = () => {
+        setWinner(apiOne) 
+     }
 
 
     return (
-         
-           <div> 
-          
-          </div>
+            <div className="container">
+           <div className="jokes">
+               <h1>{api}</h1>
+               <button submit={handle}>Best Value </button>       
+           </div>
+           <div className="jokesOne">
+               <h1>{apiOne}</h1>
+               <button submit={handleTwo}>Best Value</button>         
+           </div>
+           <div>
+              {winner}                         
+           </div>
+           </div>
     )
         }
