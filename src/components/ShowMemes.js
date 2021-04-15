@@ -5,7 +5,7 @@ import {ApiLoaded} from './ApiLoaded'
 
 export const ShowMemes = () => {
     
-    const [loaded, setLoaded] = useState(false)
+    const [loaded, setLoaded] = useState(true)
     
 
 

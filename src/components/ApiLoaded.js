@@ -9,7 +9,10 @@ export const ApiLoaded = ({loaded}) => {
             {loaded && 
                 <div className= "winner">
                     <h2>show value choosen</h2>
+                    <button>Get more options</button>
                 </div>
+
+                
             }
             
         </div>
