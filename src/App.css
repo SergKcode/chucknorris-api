@@ -30,27 +30,68 @@ body {
   align-items: center;
  
 }
+.container{
+  display: flex;
+  flex-direction: column;
+}
 
 .header{
-  color: #333;
+  color: #000;
   padding: 10px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
 }
 .winner{
   color:green;
-  font-size: 24px;
+  font-size: 1em;
   display: flex;
+  width: 80%;
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  margin-top: 20px;
   
 }
 
-
-.winner button{
+.button{
   background-color: yellowgreen;
   border-radius: 10px;
   padding: 10px;
   font-weight: bold;
   margin: 10px;
+}
+
+.jokes-container{
+  display: flex;
+  width: 100%;
+
+}
+.jokes{
+  display: flex;
+  background-color: #ccc;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-direction: column;
+  width: 40%;
+  border: 1px solid black;
+  font-size: 10px;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 15px 5px #000000;
+  margin-left: 40px;
+
+}
+.jokes-text{
+  margin: 5px;
+  min-height: 200px;
+
+}
+
+.jokes button{
+  margin: 5px;
+  
+
 }

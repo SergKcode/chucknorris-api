@@ -1,13 +1,6 @@
-import React, {useState} from 'react';
+
 import {ShowMemes} from './components/ShowMemes'
 import './App.css';
-import { ShowMemes } from './components/ShowMemes';
-
-
-
-
-
-
 
 function App() {
   
