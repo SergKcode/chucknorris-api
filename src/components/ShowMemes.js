@@ -29,41 +29,55 @@ export const ShowMemes = () => {
             
 
     }, [])
-    
-    /*let [value, setValue] = useState('')
-    const showMessage = () => {
-        console.log(value);
-      };
-    let [valueOne, setValueOne] = useState('')
-    const showMessageOne = () => {
-        console.log(valueOne);
-      };*/
-
 
       let [winner, setWinner] = useState(false)
+      let [showWinner, setShowWinner] = useState(false)
       
 
-      const handle = () => {
+      const handle = (e) => {
          setWinner(api)
+         setShowWinner(true)
       }
-      const handleTwo = () => {
+      const handleTwo = (e) => {
         setWinner(apiOne) 
+        setShowWinner(true)
      }
+
+     const handleSubmit=(e)=>{
+         console.log("a")
+     }
+     
 
 
     return (
-            <div className="container">
-           <div className="jokes">
-               <h1>{api}</h1>
-               <button submit={handle}>Best Value </button>       
-           </div>
-           <div className="jokesOne">
-               <h1>{apiOne}</h1>
-               <button submit={handleTwo}>Best Value</button>         
-           </div>
-           <div>
-              {winner}                         
-           </div>
-           </div>
+        <div className="container">
+            <div className="jokes-container">
+                    
+                <div className="jokes">
+                    <div className="jokes-text">
+                            <h1>{api}</h1>
+                        </div>
+                    <button className="button" onClick={handle}>Best Value </button>       
+                </div>
+                <div className="jokes">
+                        <div className="jokes-text">
+                            <h1>{apiOne}</h1>
+                        </div>
+                    <button className="button" onClick={handleTwo}>Best Value</button>         
+                </div>
+            </div>
+            <div>
+                    { showWinner && 
+                        <div className= "winner">
+                            <h1>The meme winner is : {winner}</h1>
+                            <form onSubmit={handleSubmit}>
+                                <button className="button"> Show new messages</button>
+                            </form>
+                    
+                        </div>
+                    }                         
+            </div>
+            
+        </div>
     )
         }

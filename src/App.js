@@ -1,18 +1,13 @@
-import React, {useState} from 'react';
+
 import {ShowMemes} from './components/ShowMemes'
 import './App.css';
-
-
-
-
-
-
 
 function App() {
   
   return (
-    <div> 
-      <ShowMemes />
+    <div className="main">
+      <h1 className="header">Chuck Norris API</h1>
+      <ShowMemes/>
     </div>
     
 
